@@ -1,0 +1,20 @@
+# Git Doc type 
+README.md
+test.txt
+*.orig
+
+# virtual environment
+.venv/
+.env
+env/
+venv/*
+path/to/venv/*
+
+
+#django related
+db.sqlite3
+*.pyc
+*/migrations/0*
+*/migrations/__pycache__
+path
+media/*
