@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from .models import Article
 
@@ -79,7 +79,8 @@ def detail(request, slug):
 
     context = {
         # "articles": Article.objects.all()
-        "article": Article.objects.get(slug=slug)
+        # "article": Article.objects.get(slug=slug)
+        "article": get_object_or_404(Article, slug=slug, status="p")
     }
 
     return render(request, "blog/detail.html", context)
